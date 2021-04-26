@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637548772930073613
+      ticks: 637550360908891606
     m_Hash: 4070978512
   m_LockFileStatus:
     m_FilePath: C:/Users/nicol/Desktop/Informatica/Cuarto_Curso/2_cuatrimestre/CIIE/Practicas/Unity/Nasus-Games/Nasus/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637548772930083635
+      ticks: 637550360908901613
     m_Hash: 2142867407
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
