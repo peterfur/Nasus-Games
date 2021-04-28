@@ -21,6 +21,10 @@ public class CameraFollow : MonoBehaviour
         if (RotateAroundPlayer)
         {
             Quaternion camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * RotationSpeed, Vector3.up);
+            if (Input.GetAxis("Mouse X") == 0)
+            {
+                camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Horizontal") * RotationSpeed, Vector3.up);
+            }
 
             offset = camTurnAngle * offset;
         }
