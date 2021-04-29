@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Variables de movimiento
     private float horizontalMove;
     private float verticalMove;
 
     private Vector3 playerVelocity;
-    private Vector3 playerDirection;
 
     public CharacterController player;
     public float playerSpeed;
@@ -17,23 +18,34 @@ public class PlayerController : MonoBehaviour
     public float fallVelocity;
     public float jumpForce;
 
+    // Variables de Cámara
+    public Camera mainCamera;
+    public CinemachineFreeLook moveCamera;
+    public CinemachineVirtualCamera aimCamera;
+    
+    private Vector3 camForward;
+    private Vector3 camRight;
+
+    private Vector3 playerDirection;
+
+    // Variables deslizamiento de pendiente
     public bool isOnSlope = false;  // Para saber si se desliza o no dependiendo de la pendiente sobre la que está el personaje
     private Vector3 hitNormal;
     public float slideVelocity;
     public float slopeForceDown;
 
+    // Variables de Disparo
     public float range = 100f;
 
-    public Camera mainCamera;
-    private Vector3 camForward;
-    private Vector3 camRight;
-
+    // Variables de Animacion
+    public Animator playerAnimatorController;
     public bool aim = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<CharacterController>();
+        playerAnimatorController = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,6 +58,8 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity = new Vector3(horizontalMove, 0f, verticalMove);
         playerVelocity = Vector3.ClampMagnitude(playerVelocity, 1);
+
+        playerAnimatorController.SetFloat("PlayerWalkVelocity", playerVelocity.magnitude * playerSpeed);
 
         camDirection();
         playerDirection = playerVelocity.x * camRight + playerVelocity.z * camForward;
@@ -66,11 +80,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Aim"))
         {
             aim = true;
+            moveCamera.Priority = 9;
+            aimCamera.Priority = 10;
+
         } 
         else
         {
             aim = false;
+
+            moveCamera.Priority = 10;
+            aimCamera.Priority = 9;
         }
+        playerAnimatorController.SetBool("PlayerAim", aim);
     }
 
     // Funcion para las habilidades del jugador
@@ -80,9 +101,10 @@ public class PlayerController : MonoBehaviour
         {
             fallVelocity = jumpForce;
             playerDirection.y = fallVelocity;
+            playerAnimatorController.SetTrigger("PlayerJump");
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && aim)
         {
             //Debug.Log("Dispara");
             Shoot();
@@ -114,8 +136,9 @@ public class PlayerController : MonoBehaviour
         {
             fallVelocity -= gravity * Time.deltaTime;
             playerDirection.y = fallVelocity;
+            playerAnimatorController.SetFloat("PlayerVerticalVelocity", player.velocity.y);
         }
-
+        playerAnimatorController.SetBool("IsGrounded", player.isGrounded);
         SlideDown();
     }
 
@@ -161,6 +184,12 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(mainCamera.transform.position, camForward, out hit, range))  // range es opcional
         {
             Debug.Log(hit.transform.name);
+            playerAnimatorController.SetTrigger("PlayerShoot");
         }
+    }
+
+    private void OnAnimatorMove()
+    {
+
     }
 }
