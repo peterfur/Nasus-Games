@@ -22,16 +22,16 @@ public class CharacterAiming : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (Input.GetButton("Aim")) {
-            xAxis.Update(Time.fixedDeltaTime);
-            yAxis.Update(Time.fixedDeltaTime);
+        
+        xAxis.Update(Time.deltaTime);
+        yAxis.Update(Time.deltaTime);
 
-            cameraLookAt.eulerAngles = new Vector3(yAxis.Value, xAxis.Value, 0);
+        cameraLookAt.eulerAngles = new Vector3(yAxis.Value, xAxis.Value, 0);
 
-            float yawCamera = mainCamera.transform.rotation.eulerAngles.y;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, yawCamera, 0f), turnSpeed * Time.fixedDeltaTime);
-        }
+        float yawCamera = mainCamera.transform.rotation.eulerAngles.y;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, yawCamera, 0f), turnSpeed * Time.deltaTime);
+        
     }
 }

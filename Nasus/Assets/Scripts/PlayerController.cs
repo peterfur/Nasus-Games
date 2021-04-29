@@ -19,12 +19,14 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
 
     // Variables de Cámara
+    public Transform focusCamera;
     public Camera mainCamera;
     public CinemachineFreeLook moveCamera;
     public CinemachineVirtualCamera aimCamera;
-    
+
     private Vector3 camForward;
     private Vector3 camRight;
+    public Canvas canvas;
 
     private Vector3 playerDirection;
 
@@ -66,7 +68,6 @@ public class PlayerController : MonoBehaviour
         playerDirection = playerDirection * playerSpeed;
 
         LookAt();
-        //player.transform.LookAt(player.transform.position + playerDirection);
 
         SetGravity();
         PlayerSkills();
@@ -83,13 +84,16 @@ public class PlayerController : MonoBehaviour
             moveCamera.Priority = 9;
             aimCamera.Priority = 10;
 
+            canvas.enabled = true;
+
         } 
         else
         {
             aim = false;
-
+            focusCamera.rotation = player.transform.rotation;
             moveCamera.Priority = 10;
             aimCamera.Priority = 9;
+            canvas.enabled = false;
         }
         playerAnimatorController.SetBool("PlayerAim", aim);
     }
@@ -118,10 +122,10 @@ public class PlayerController : MonoBehaviour
         {
             player.transform.LookAt(player.transform.position + playerDirection);
         }
-        else
+ /*       else
         {
             player.transform.LookAt(player.transform.position + camForward);
-        }
+        }*/
     }
 
     // Funcion de gravedad
