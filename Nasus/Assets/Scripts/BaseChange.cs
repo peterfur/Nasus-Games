@@ -9,23 +9,7 @@ public class BaseChange : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Hola");
+            Loader.Load(Loader.Scene.SampleScene1);
         }
     }
-
-    private void Update()
-    {
-        
-    }
-
-    /* void OnCollisionEnter(Collision other)
-     {
-         Debug.Log("Hola");
-
-         if (other.gameObject.CompareTag("Player"))
-         {
-             Debug.Log("Hola");
-             Loader.Load(Loader.Scene.SampleScene1);
-         }
-     }*/
 }
