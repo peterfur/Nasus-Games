@@ -1236,7 +1236,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7982342669496804168, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7982342669496804168, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1277,6 +1277,22 @@ PrefabInstance:
     - target: {fileID: 7982342669496804168, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982819699829457411, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: OnResetDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2122329802}
+    - target: {fileID: 7982819699829457411, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: OnReceiveDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2122329802}
+    - target: {fileID: 7982819699829457411, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: OnResetDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeHitPointUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982819699829457411, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: OnReceiveDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeHitPointUI
       objectReference: {fileID: 0}
     - target: {fileID: 7982819699829457420, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
       propertyPath: cameraSettings
@@ -1391,7 +1407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2837591489737928217, guid: 91b6748f72a043449865c90852a4b673, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2837591489737928217, guid: 91b6748f72a043449865c90852a4b673, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2366,6 +2382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a10d1f3307879f24fa4403887422c73f, type: 3}
+--- !u!20 &959072104 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20494501241764970, guid: 09b69b761539b1b4786a17a9e37640ee, type: 3}
+  m_PrefabInstance: {fileID: 1749812067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &971060504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4421,6 +4442,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114116141714038024, guid: 360e769726970954fb7f09b03b970ab4, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 959072104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360e769726970954fb7f09b03b970ab4, type: 3}
 --- !u!4 &1589864888 stripped
@@ -5483,6 +5508,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6d28a2c2a9ed754aaa049552b39157c, type: 3}
+--- !u!114 &2122329802 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2837591489737928221, guid: 91b6748f72a043449865c90852a4b673, type: 3}
+  m_PrefabInstance: {fileID: 498607470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2028313e47c41b4fbde4b781ba9df36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2142065319
 GameObject:
   m_ObjectHideFlags: 0
