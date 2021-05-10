@@ -4398,6 +4398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skybox
       objectReference: {fileID: 0}
+    - target: {fileID: 1541463040318396, guid: 360e769726970954fb7f09b03b970ab4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4829675360753414, guid: 360e769726970954fb7f09b03b970ab4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5110,6 +5114,22 @@ PrefabInstance:
       propertyPath: lookAt
       value: 
       objectReference: {fileID: 1274282082}
+    - target: {fileID: 114563282083965738, guid: 09b69b761539b1b4786a17a9e37640ee, type: 3}
+      propertyPath: m_IgnoreTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563282083965738, guid: 09b69b761539b1b4786a17a9e37640ee, type: 3}
+      propertyPath: m_CollideAgainst.m_Bits
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 114782163377983944, guid: 09b69b761539b1b4786a17a9e37640ee, type: 3}
+      propertyPath: m_IgnoreTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114782163377983944, guid: 09b69b761539b1b4786a17a9e37640ee, type: 3}
+      propertyPath: m_CollideAgainst.m_Bits
+      value: 24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b69b761539b1b4786a17a9e37640ee, type: 3}
 --- !u!4 &1760463049 stripped
