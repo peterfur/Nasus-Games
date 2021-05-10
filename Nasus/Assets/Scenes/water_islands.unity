@@ -4446,6 +4446,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20285033290642768, guid: 360e769726970954fb7f09b03b970ab4, type: 3}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20285033290642768, guid: 360e769726970954fb7f09b03b970ab4, type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20285033290642768, guid: 360e769726970954fb7f09b03b970ab4, type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114116141714038024, guid: 360e769726970954fb7f09b03b970ab4, type: 3}
       propertyPath: camera
       value: 
