@@ -61,12 +61,6 @@ public class PlayerInput : MonoBehaviour
 
     const float k_AttackInputDuration = 0.03f;
 
-    void Start()
-    {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
     void Awake()
     {
         m_AttackInputWait = new WaitForSeconds(k_AttackInputDuration);

@@ -1720,6 +1720,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7982819699191573704, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: attackPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982819699191573704, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: attackPoints.Array.data[1].offset.x
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982819699191573704, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: attackPoints.Array.data[2].offset.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982819699829457411, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2122329802}
+    - target: {fileID: 7982819699829457411, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeHitPointUI
+      objectReference: {fileID: 0}
     - target: {fileID: 7982819699829457411, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
       propertyPath: OnResetDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

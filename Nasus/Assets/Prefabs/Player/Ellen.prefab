@@ -6126,7 +6126,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   hitParticlePrefab: {fileID: 198200190501009950, guid: 400e06051701a8c4998087ae421728e3, type: 3}
-  attackPoints: []
+  attackPoints:
+  - radius: 0.3
+    offset: {x: 0.15, y: 0, z: 0}
+    attackRoot: {fileID: 7982113063646296834}
+  - radius: 0.3
+    offset: {x: 0.49, y: 0, z: 0}
+    attackRoot: {fileID: 7982113063646296834}
+  - radius: 0.3
+    offset: {x: 0.7, y: 0, z: 0}
+    attackRoot: {fileID: 7982113063646296834}
   effects:
   - {fileID: 7982819698253037829}
   - {fileID: 7982819700241779819}
@@ -19818,7 +19827,7 @@ GameObject:
   - component: {fileID: 7982819699829457423}
   - component: {fileID: 7982819699829457411}
   m_Layer: 6
-  m_Name: Ellen (1)
+  m_Name: Ellen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
