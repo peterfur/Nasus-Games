@@ -9,7 +9,7 @@ namespace Utilities
     [RequireComponent(typeof(Animator))]
     public class PlayerController : MonoBehaviour, IMessageReceiver
     {
-        public static PlayerController Instance
+        public static PlayerController instance
         {
             get { return s_Instance; }
         }
