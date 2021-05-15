@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Utilities {
+namespace Utilities 
+{
     public class MeleeWeapon : MonoBehaviour
     {
         [System.Serializable]
@@ -111,8 +112,10 @@ namespace Utilities {
         // Update is called once per frame
         private void FixedUpdate()
         {
+            
             if (m_InAttack)
             {
+                
                 for (int i = 0; i < attackPoints.Length; ++i)
                 {
                     AttackPoint pts = attackPoints[i];
@@ -130,11 +133,11 @@ namespace Utilities {
                     Ray r = new Ray(worldPos, attackVector.normalized);
 
                     int contacts = Physics.SphereCastNonAlloc(r, pts.radius, s_RaycastHitCache, attackVector.magnitude, 0, QueryTriggerInteraction.Ignore);
+                    contacts = Physics.SphereCastNonAlloc(r, pts.radius, s_RaycastHitCache);
 
                     for (int k = 0; k < contacts; ++k)
                     {
                         Collider col = s_RaycastHitCache[k].collider;
-
                         //Comprobar el daño de colision
                         if (col != null)
                             CheckDamage(col, pts);
@@ -165,7 +168,6 @@ namespace Utilities {
                 //hit an object that is not in our layer, this end the attack. we "bounce" off it
                 return false;
             }
-
             Damageable.DamageMessage data;
 
             data.amount = damage;
