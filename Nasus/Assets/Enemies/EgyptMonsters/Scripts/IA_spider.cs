@@ -8,6 +8,8 @@ public class IA_spider : MonoBehaviour
     public float speed = 2;
     bool follow = false;
     private Animator anim;
+    float rangeAttack = 3;
+    public float attackDuration = 1f;
 
     private void Awake()
     {
@@ -28,6 +30,17 @@ public class IA_spider : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, ObjectToFollow.transform.position, speed * Time.deltaTime);
             transform.forward = ObjectToFollow.position - transform.position;
         }
+
+        Vector3 positionS = transform.position;
+        Vector3 positionE = ObjectToFollow.position;
+        float range = Vector3.Distance(positionS, positionE);
+
+        if (range <= rangeAttack)
+        {
+            anim.SetTrigger("Attack");
+            tryDamage();
+        } 
+
          
     }
 
@@ -47,5 +60,11 @@ public class IA_spider : MonoBehaviour
             follow = false;
             anim.SetBool("isFinding", follow);
         }
+    }
+
+    // Donde se harán los cálculos del daño
+    public void tryDamage()
+    {
+
     }
 }

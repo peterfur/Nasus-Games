@@ -6132,6 +6132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectToFollow: {fileID: 542212565}
   speed: 2
+  attackDuration: 1
 --- !u!135 &1594415044
 SphereCollider:
   m_ObjectHideFlags: 0
