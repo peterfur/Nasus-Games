@@ -153,6 +153,8 @@ namespace Utilities
             m_GrenadeTarget = m_Target.transform.position;
         }
 
+        public void PlayStep() { }
+
         public void Shoot()
         {
             Vector3 toTarget = m_GrenadeTarget - transform.position;
