@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+public class MenuMuerteManager : MonoBehaviour
 {
-    public void PlayButton()
+    public void RestartButton()
     {
-        SceneManager.LoadScene("water_islands");
+        SceneManager.LoadScene("water_islands");//Cambiar Esto, debería de cargar la escena en la que se ha muerto.
     }
 
     public void ExitButton()
@@ -15,5 +15,4 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Cerramos el juego");
         Application.Quit();
     }
-
 }

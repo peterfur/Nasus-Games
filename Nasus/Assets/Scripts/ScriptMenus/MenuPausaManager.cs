@@ -7,7 +7,7 @@ public class MenuPausaManager : MonoBehaviour
 {
     public void ResumeButton()
     {
-        SceneManager.LoadScene("SampleScene1");
+        SceneManager.LoadScene("water_islands");
     }
 
     public void ExitButton()
