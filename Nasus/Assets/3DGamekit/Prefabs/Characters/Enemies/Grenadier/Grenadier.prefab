@@ -88952,7 +88952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4244198514605058
 Transform:
   m_ObjectHideFlags: 0
@@ -88979,7 +88979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f222d050e5abd8c4788f0ee66e798e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 3
+  maxHitPoints: 5
   invulnerabilityTime: 3
   hitAngle: 170
   hitForwardRotation: 180
@@ -93969,11 +93969,8 @@ GameObject:
   - component: {fileID: 95408953468183704}
   - component: {fileID: 114578858838445908}
   - component: {fileID: 195657170040882262}
-  - component: {fileID: 114161401988340100}
   - component: {fileID: 114516983396116286}
   - component: {fileID: 5712319371805304273}
-  - component: {fileID: 5675957330988047617}
-  - component: {fileID: 3876683162371705545}
   m_Layer: 7
   m_Name: Grenadier
   m_TagString: Untagged
@@ -94052,7 +94049,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878432194002958}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: -1372625422
   m_Radius: 0.5
   m_Speed: 3.5
@@ -94067,32 +94064,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &114161401988340100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878432194002958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c974c069622ac488eff39e86d2f59d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScanner:
-    heightOffset: 0
-    detectionRadius: 10
-    detectionAngle: 270
-    maxHeightDifference: 1
-    viewBlockerLayerMask:
-      serializedVersion: 2
-      m_Bits: 24
-  meleeRange: 4
-  rangeRange: 10
-  fistWeapon: {fileID: 114066466787847196}
-  grenadeLauncher: {fileID: 114820053008885524}
-  shield: {fileID: 1637688901460628}
-  coreRenderer: {fileID: 137752784327348492}
 --- !u!114 &114516983396116286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94135,99 +94106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interpolateTurning: 0
   applyAnimationRotation: 0
---- !u!114 &5675957330988047617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878432194002958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f222d050e5abd8c4788f0ee66e798e41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitPoints: 3
-  invulnerabilityTime: 3
-  hitAngle: 360
-  hitForwardRotation: 360
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114578858838445908}
-        m_TargetAssemblyTypeName: Utilities.GrenadierBehaviour, Assembly-CSharp
-        m_MethodName: Die
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnReceiveDamage:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114578858838445908}
-        m_TargetAssemblyTypeName: Utilities.GrenadierBehaviour, Assembly-CSharp
-        m_MethodName: Hit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 198239694151758736}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnHitWhileInvulnerable:
-    m_PersistentCalls:
-      m_Calls: []
-  OnBecomeVulnerable:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114578858838445908}
-        m_TargetAssemblyTypeName: Utilities.GrenadierBehaviour, Assembly-CSharp
-        m_MethodName: ReturnVulnerable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnResetDamage:
-    m_PersistentCalls:
-      m_Calls: []
-  onDamageMessageReceivers: []
---- !u!65 &3876683162371705545
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878432194002958}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 1.7, z: 0}
 --- !u!1 &1878574748180302
 GameObject:
   m_ObjectHideFlags: 0

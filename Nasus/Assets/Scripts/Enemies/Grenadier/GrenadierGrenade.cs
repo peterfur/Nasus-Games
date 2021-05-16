@@ -83,8 +83,9 @@ namespace Utilities
 
         public void Explosion()
         {
-            int count = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, m_ExplosionHitCache,
-                damageMask.value);
+            //int count = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, m_ExplosionHitCache,
+            //    damageMask.value);
+            int count = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, m_ExplosionHitCache);
 
             Damageable.DamageMessage message = new Damageable.DamageMessage
             {
