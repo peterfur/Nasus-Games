@@ -2022,8 +2022,8 @@ GameObject:
   - component: {fileID: 367476077}
   - component: {fileID: 367476076}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: base_change
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2054,7 +2054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a69d297c1ef128d4a8628bde3a8d1ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss_dead: 1
 --- !u!65 &367476077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2453,6 +2452,10 @@ PrefabInstance:
     - target: {fileID: 7984810919827527968, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
       propertyPath: m_Name
       value: Ellen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984810919827527968, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8007554200582076476, guid: df3cae17124e0244f8c87ae170c90ab6, type: 3}
       propertyPath: m_Materials.Array.data[0]
