@@ -5,9 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MenuPausaManager : MonoBehaviour
 {
+
+    private int sceneToContinue;
+
+    void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void ResumeButton()
     {
-        SceneManager.LoadScene("water_islands");
+
+        Time.timeScale = 1;
+        SceneManager.UnloadSceneAsync("MenuPausa");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+
     }
 
     public void ExitButton()
