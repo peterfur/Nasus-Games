@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 25636684}
   - component: {fileID: 25636683}
   m_Layer: 4
-  m_Name: Plane
+  m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -8867,7 +8867,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142065319}
-  m_Mesh: {fileID: 4300000, guid: d43fabc0c6249d84b8e67387e5f3a340, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &2142065321
 MeshRenderer:
   m_ObjectHideFlags: 0
