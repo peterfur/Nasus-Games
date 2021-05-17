@@ -81,6 +81,7 @@ namespace Utilities
             {
                 // Si ya está muerto, se ignora el seguir restando daño
                 return;
+                
             }
             if (isInvulnerable)
             {

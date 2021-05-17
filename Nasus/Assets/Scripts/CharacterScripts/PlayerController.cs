@@ -531,6 +531,9 @@ namespace Utilities
             /**
              * TODO: Llamamos a la funcion del director que cambia a la pantalla de GameOver
              **/
+            Director.Load(Director.Scene.water_islands);
+
+
         }
     }
 }

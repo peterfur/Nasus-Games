@@ -128,6 +128,9 @@ namespace Utilities
         public void Die()
         {
             m_EnemyController.animator.SetTrigger(hashDeathParam);
+            BaseChange baseScript = GameObject.FindGameObjectWithTag("Finish").GetComponent<BaseChange>();
+            baseScript.setBoss(true);
+            
         }
 
         public void ActivateShield()

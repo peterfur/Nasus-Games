@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public static class Loader
+public static class Director
 {
     public enum Scene
     {
-        SampleScene1
+        water_islands,
+        GameOver
     }
     public static void Load(Scene scene)
     {
