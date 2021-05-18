@@ -517,13 +517,19 @@ namespace Utilities
 
             // El personaje se queda invulnerable
             m_Damageable.isInvulnerable = true;
-
+            Debug.Log("DieFunctionFinal");
             // Llamamos a una funcion llamada DieRoutine que una vez termine la animacion de muerte, hace lo que deberia para la escena de GameOver
             DieRoutine();
+
+            DeathMenu();
+
+            Debug.Log("DieFunctionFinalFIIIIIIINAL");
         }
 
         protected IEnumerator DieRoutine()
         {
+            Debug.Log("DieRoutine");
+
             // Wait for the animator to be transitioning from the EllenDeath state.
             while (m_CurrentStateInfo.shortNameHash != m_HashEllenDeath || !m_IsAnimatorTransitioning)
             {
@@ -540,12 +546,14 @@ namespace Utilities
             /**
              * TODO: Llamamos a la funcion del director que cambia a la pantalla de GameOver
              **/
+        }
 
-            currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
+        void DeathMenu()
+        {
+            
+            Debug.Log("Abre el menu de muerte");
 
             SceneManager.LoadScene("MenuDeath");
-
         }
     }
 }
