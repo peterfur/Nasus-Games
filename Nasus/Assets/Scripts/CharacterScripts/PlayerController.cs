@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using Utilities.Message;
@@ -130,10 +131,10 @@ namespace Utilities
         {
             SceneLinkedSMB<PlayerController>.Initialise(playerAnimatorController, this);
 
-            //m_Damageable = GetComponent<Damageable>();
-            //m_Damageable.onDamageMessageReceivers.Add(this);
+            m_Damageable = GetComponent<Damageable>();
+            m_Damageable.onDamageMessageReceivers.Add(this);
 
-            //m_Damageable.isInvulnerable = true;
+            m_Damageable.isInvulnerable = true;
 
             EquipMeleeWeapon(true);
 
@@ -145,6 +146,13 @@ namespace Utilities
         {
 
         }
+
+        void Start()
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
 
         // Start is called before the first frame update
         void Awake()
@@ -500,6 +508,29 @@ namespace Utilities
 
             // El personaje se queda invulnerable
             m_Damageable.isInvulnerable = true;
+
+            // Llamamos a una funcion llamada DieRoutine que una vez termine la animacion de muerte, hace lo que deberia para la escena de GameOver
+            DieRoutine();
+        }
+
+        protected IEnumerator DieRoutine()
+        {
+            // Wait for the animator to be transitioning from the EllenDeath state.
+            while (m_CurrentStateInfo.shortNameHash != m_HashEllenDeath || !m_IsAnimatorTransitioning)
+            {
+                yield return null;
+            }
+
+            // Wait for the screen to fade out.
+            yield return StartCoroutine(ScreenFader.FadeSceneOut());
+            while (ScreenFader.IsFading)
+            {
+                yield return null;
+            }
+
+            /**
+             * TODO: Llamamos a la funcion del director que cambia a la pantalla de GameOver
+             **/
         }
     }
 }
