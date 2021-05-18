@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: b5c369ff5a0a19449a611e79a76d2651
+  - enabled: 1
+    path: Assets/Scenes/MenuDeath.unity
+    guid: 54243e9bde35a8b4bb122c658a7530d5
+  - enabled: 1
+    path: Assets/Scenes/water_islands.unity
+    guid: 73c16cc20bd5e04448832d3a3f8eaf18
+  - enabled: 1
+    path: Assets/Scenes/MenuPausa.unity
+    guid: 754742dfbe84e3042957156a2ab209db
   m_configObjects: {}
