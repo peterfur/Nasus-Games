@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using Utilities.Message;
+using UnityEngine.SceneManagement;
 
 namespace Utilities
 {
@@ -99,7 +100,8 @@ namespace Utilities
         // Control variable
         readonly int m_HashBlockInput = Animator.StringToHash("BlockInput");
 
-
+        private int currentSceneIndex;
+        
         // FUNCTIONS:
         protected bool IsMoveInput
         {
@@ -192,6 +194,13 @@ namespace Utilities
             TimeoutToIdle();
 
             m_PreviouslyGrounded = m_isGrounded;
+
+            if (m_Input.Pause)
+            {
+                Time.timeScale = 0;
+                SceneManager.LoadScene("MenuPausa", LoadSceneMode.Additive);
+
+            }
         }
 
         // Called at the start of FixedUpdate to record the current state of the base layer of the animator.
@@ -531,6 +540,12 @@ namespace Utilities
             /**
              * TODO: Llamamos a la funcion del director que cambia a la pantalla de GameOver
              **/
+
+            currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
+
+            SceneManager.LoadScene("MenuDeath");
+
         }
     }
 }
