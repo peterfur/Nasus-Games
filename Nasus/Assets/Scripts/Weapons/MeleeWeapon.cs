@@ -4,8 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+<<<<<<< HEAD
 namespace Utilities 
 {
+=======
+namespace Utilities {
+>>>>>>> mapa2
     public class MeleeWeapon : MonoBehaviour
     {
         [System.Serializable]
@@ -112,6 +116,7 @@ namespace Utilities
         // Update is called once per frame
         private void FixedUpdate()
         {
+<<<<<<< HEAD
             
             if (m_InAttack)
             {
@@ -143,6 +148,37 @@ namespace Utilities
                             CheckDamage(col, pts);
                     }
 
+=======
+            if (m_InAttack)
+            {
+                for (int i = 0; i < attackPoints.Length; ++i)
+                {
+                    AttackPoint pts = attackPoints[i];
+
+                    Vector3 worldPos = pts.attackRoot.position + pts.attackRoot.TransformVector(pts.offset);
+                    Vector3 attackVector = worldPos - m_PreviousPos[i];
+
+                    if (attackVector.magnitude < 0.001f)
+                    {
+                        // A zero vector for the sphere cast don't yield any result, even if a collider overlap the "sphere" created by radius. 
+                        // so we set a very tiny microscopic forward cast to be sure it will catch anything overlaping that "stationary" sphere cast
+                        attackVector = Vector3.forward * 0.0001f;
+                    }
+
+                    Ray r = new Ray(worldPos, attackVector.normalized);
+
+                    int contacts = Physics.SphereCastNonAlloc(r, pts.radius, s_RaycastHitCache, attackVector.magnitude, 0, QueryTriggerInteraction.Ignore);
+
+                    for (int k = 0; k < contacts; ++k)
+                    {
+                        Collider col = s_RaycastHitCache[k].collider;
+
+                        //Comprobar el daño de colision
+                        if (col != null)
+                            CheckDamage(col, pts);
+                    }
+
+>>>>>>> mapa2
                     m_PreviousPos[i] = worldPos;
 
 #if UNITY_EDITOR
@@ -168,6 +204,10 @@ namespace Utilities
                 //hit an object that is not in our layer, this end the attack. we "bounce" off it
                 return false;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> mapa2
             Damageable.DamageMessage data;
 
             data.amount = damage;
