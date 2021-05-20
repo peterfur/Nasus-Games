@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Utilities 
 {
     public class MeleeWeapon : MonoBehaviour
@@ -112,7 +111,6 @@ namespace Utilities
         // Update is called once per frame
         private void FixedUpdate()
         {
-            
             if (m_InAttack)
             {
                 
@@ -138,6 +136,7 @@ namespace Utilities
                     for (int k = 0; k < contacts; ++k)
                     {
                         Collider col = s_RaycastHitCache[k].collider;
+
                         //Comprobar el daño de colision
                         if (col != null)
                             CheckDamage(col, pts);
@@ -168,6 +167,7 @@ namespace Utilities
                 //hit an object that is not in our layer, this end the attack. we "bounce" off it
                 return false;
             }
+
             Damageable.DamageMessage data;
 
             data.amount = damage;

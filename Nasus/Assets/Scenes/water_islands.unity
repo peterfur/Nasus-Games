@@ -1666,14 +1666,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlockA01ADEP
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b1e98f823992d3c418aaf5220fffd662, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b1e98f823992d3c418aaf5220fffd662, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 32
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1e98f823992d3c418aaf5220fffd662, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2879,7 +2871,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 32
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &480771645
 Transform:
@@ -3087,14 +3079,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPropsBottomA_ST (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d9869357ee4fead4db0ceb2429718806, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d9869357ee4fead4db0ceb2429718806, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 32
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d9869357ee4fead4db0ceb2429718806, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3196,14 +3180,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1e98f823992d3c418aaf5220fffd662, type: 3}
       propertyPath: m_Name
       value: WallBlockA01ADEP (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b1e98f823992d3c418aaf5220fffd662, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b1e98f823992d3c418aaf5220fffd662, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1e98f823992d3c418aaf5220fffd662, type: 3}
       propertyPath: m_RootOrder
@@ -4034,14 +4010,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: a10d1f3307879f24fa4403887422c73f, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: a10d1f3307879f24fa4403887422c73f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 32
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a10d1f3307879f24fa4403887422c73f, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -4098,14 +4066,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: a3fa2d70d3c31d04e9e8dbf67da39648, type: 3}
       propertyPath: m_Name
       value: PillarADEP_ST (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: a3fa2d70d3c31d04e9e8dbf67da39648, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: a3fa2d70d3c31d04e9e8dbf67da39648, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a3fa2d70d3c31d04e9e8dbf67da39648, type: 3}
       propertyPath: m_RootOrder
@@ -5799,14 +5759,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d9869357ee4fead4db0ceb2429718806, type: 3}
       propertyPath: m_Name
       value: WallPropsBottomA_ST
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d9869357ee4fead4db0ceb2429718806, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d9869357ee4fead4db0ceb2429718806, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d9869357ee4fead4db0ceb2429718806, type: 3}
       propertyPath: m_RootOrder
@@ -10648,7 +10600,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080045436}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
