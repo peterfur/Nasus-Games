@@ -431,6 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4983805800975048}
+  - component: {fileID: 3014466119720110427}
   m_Layer: 0
   m_Name: Hand_L
   m_TagString: Untagged
@@ -453,6 +454,31 @@ Transform:
   m_Father: {fileID: 4967780616799982}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3014466119720110427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733539586706066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d3ef5e28aaefc4196638adbd0b0978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  hitParticlePrefab: {fileID: 0}
+  attackPoints:
+  - radius: 0.5
+    offset: {x: -0.3, y: 0, z: 0}
+    attackRoot: {fileID: 4983805800975048}
+  - radius: 0.5
+    offset: {x: 0.3, y: 0, z: 0}
+    attackRoot: {fileID: 4983805800975048}
+  effects: []
 --- !u!1 &1748997484858318
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4807764366534526}
+  - component: {fileID: 4243142035995730266}
   m_Layer: 0
   m_Name: Hand_R
   m_TagString: Untagged
@@ -484,6 +511,31 @@ Transform:
   m_Father: {fileID: 4858320662717334}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4243142035995730266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748997484858318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d3ef5e28aaefc4196638adbd0b0978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  hitParticlePrefab: {fileID: 0}
+  attackPoints:
+  - radius: 0.5
+    offset: {x: -0.3, y: 0, z: 0}
+    attackRoot: {fileID: 4807764366534526}
+  - radius: 0.5
+    offset: {x: 0.3, y: 0, z: 0}
+    attackRoot: {fileID: 4807764366534526}
+  effects: []
 --- !u!1 &1769440103702522
 GameObject:
   m_ObjectHideFlags: 0
