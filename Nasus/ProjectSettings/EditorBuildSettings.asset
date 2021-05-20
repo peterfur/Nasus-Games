@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuPausa.unity
     guid: 754742dfbe84e3042957156a2ab209db
+  - enabled: 1
+    path: Assets/Scenes/dungeon.unity
+    guid: 02ffad2c89147ae41acc4aad597d3d7f
   m_configObjects: {}

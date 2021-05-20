@@ -15,7 +15,7 @@ namespace Utilities
             ORIENTED_ABOVE,
             ORIENTED_FACE
         }
-
+	
         public static readonly int hashInPursuitParam = Animator.StringToHash("InPursuit");
         public static readonly int hashSpeedParam = Animator.StringToHash("Speed");
         public static readonly int hashTurnAngleParam = Animator.StringToHash("Angle");
@@ -128,6 +128,7 @@ namespace Utilities
         public void Die()
         {
             m_EnemyController.animator.SetTrigger(hashDeathParam);
+            //BaseChange.setBoss(true);
         }
 
         public void ActivateShield()
